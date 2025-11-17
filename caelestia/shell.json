@@ -323,9 +323,9 @@
     "notifs": {
         "actionOnClick": false,
         "clearThreshold": 0.3,
-        "defaultExpireTimeout": 5000,
+        "defaultExpireTimeout": 3000,
         "expandThreshold": 20,
-        "expire": false
+        "expire": true
     },
     "osd": {
         "enabled": true,
@@ -342,11 +342,11 @@
         "audioIncrement": 0.1,
         "maxVolume": 1.0,
         "defaultPlayer": "Spotify",
-        "gpuType": "",
+        "gpuType": "NVIDIA",
         "playerAliases": [{ "from": "com.github.th_ch.youtube_music", "to": "YT Music" }],
         "weatherLocation": "",
         "useFahrenheit": false,
-        "useTwelveHourClock": false,
+        "useTwelveHourClock": true,
         "smartScheme": true,
         "visualiserBars": 45
     },
