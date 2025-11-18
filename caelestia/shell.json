@@ -72,12 +72,12 @@
                 },
                 {
                     "timeout": 300,
-                    "idleAction": "dpms off",
-                    "returnAction": "dpms on"
+                    "idleAction": "hyprctl dispatch dpms off",
+                    "returnAction": "hyprctl dispatch dpms on"
                 },
                 {
                     "timeout": 600,
-                    "idleAction": ["systemctl", "suspend-then-hibernate"]
+                    "idleAction": ["systemctl", "suspend"]
                 }
             ]
         }
@@ -155,7 +155,7 @@
             "showBattery": false,
             "showBluetooth": false,
             "showKbLayout": false,
-            "showMicrophone": false,
+            "showMicrophone": true,
             "showNetwork": false,
             "showLockStatus": true
         },
@@ -184,8 +184,8 @@
         }
     },
     "border": {
-        "rounding": 25,
-        "thickness": 10
+        "rounding": 4,
+        "thickness": 6
     },
     "dashboard": {
         "enabled": true,

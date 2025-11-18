@@ -16,6 +16,11 @@ PACMAN_PACKAGES=(
     hyprland
     hyprpaper
     hyprshot
+    timeshift
+    btop
+    thunar
+    thunar-actions-plugin
+    unzip
 )
 
 # AUR packages (installed via yay)
