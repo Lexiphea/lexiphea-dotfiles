@@ -344,18 +344,18 @@
         "defaultPlayer": "Spotify",
         "gpuType": "NVIDIA",
         "playerAliases": [{ "from": "com.github.th_ch.youtube_music", "to": "YT Music" }],
-        "weatherLocation": "",
+        "weatherLocation": "Subang Jaya",
         "useFahrenheit": false,
         "useTwelveHourClock": true,
         "smartScheme": true,
-        "visualiserBars": 45
+        "visualiserBars": 64
     },
     "session": {
         "dragThreshold": 30,
         "enabled": true,
         "vimKeybinds": false,
         "commands": {
-            "logout": ["loginctl", "terminate-user", ""],
+            "logout": ["loginctl", "terminate-session", ""],
             "shutdown": ["systemctl", "poweroff"],
             "hibernate": ["systemctl", "hibernate"],
             "reboot": ["systemctl", "reboot"]
