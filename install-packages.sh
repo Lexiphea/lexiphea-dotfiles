@@ -21,11 +21,23 @@ PACMAN_PACKAGES=(
     thunar
     thunar-actions-plugin
     unzip
+    bitwarden
+    easyeffects
+    spotify-launcher
+
 )
 
 # AUR packages (installed via yay)
 AUR_PACKAGES=(
     caelestia-shell
+    cursor-bin
+    bitwarden-bin
+    spicetify-cli
+    protontricks
+    vesktop-bin
+    visual-studio-code-bin
+    wtype-git
+    zen-browser-bin
 )
 
 # Function to print colored messages
