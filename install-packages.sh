@@ -38,6 +38,7 @@ AUR_PACKAGES=(
     visual-studio-code-bin
     wtype-git
     zen-browser-bin
+    bibata-cursor-theme-bin
 )
 
 # Function to print colored messages

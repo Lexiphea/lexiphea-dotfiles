@@ -346,7 +346,7 @@
     "playerAliases": [
       { "from": "com.github.th_ch.youtube_music", "to": "YT Music" }
     ],
-    "weatherLocation": "Subang+Jaya",
+    "weatherLocation": "Subang Jaya",
     "useFahrenheit": false,
     "useTwelveHourClock": true,
     "smartScheme": true,
