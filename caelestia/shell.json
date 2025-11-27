@@ -67,16 +67,16 @@
       "inhibitWhenAudio": true,
       "timeouts": [
         {
-          "timeout": 300,
+          "timeout": 600,
           "idleAction": "lock"
         },
         {
-          "timeout": 600,
+          "timeout": 900,
           "idleAction": "hyprctl dispatch dpms off",
           "returnAction": "hyprctl dispatch dpms on"
         },
         {
-          "timeout": 900,
+          "timeout": 1800,
           "idleAction": ["systemctl", "suspend"]
         }
       ]
