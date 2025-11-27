@@ -16,6 +16,16 @@ PACMAN_PACKAGES=(
     hyprland
     hyprpaper
     hyprshot
+    hyprland-qt-support
+    hyprpaper
+    hyprpolkitagent
+    hyprutils
+    hyprcursor
+    vlc
+    thunar
+    thunar-archive-plugin
+    steam
+    yazi
     timeshift
     btop
     thunar
@@ -24,7 +34,12 @@ PACMAN_PACKAGES=(
     bitwarden
     easyeffects
     spotify-launcher
-
+    gamemode
+    lib32-gamemode
+    nvidia-open-dkms
+    lib32-nvidia-utils
+    nvidia-utils
+    nvidia-settings
 )
 
 # AUR packages (installed via yay)
