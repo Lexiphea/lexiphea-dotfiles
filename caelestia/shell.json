@@ -184,8 +184,8 @@
     }
   },
   "border": {
-    "rounding": 4,
-    "thickness": 6
+    "rounding": 6,
+    "thickness": 2
   },
   "dashboard": {
     "enabled": true,
@@ -249,7 +249,7 @@
         "icon": "light_mode",
         "description": "Change the scheme to light mode",
         "command": ["setMode", "light"],
-        "enabled": true,
+        "enabled": false,
         "dangerous": false
       },
       {
@@ -257,7 +257,7 @@
         "icon": "dark_mode",
         "description": "Change the scheme to dark mode",
         "command": ["setMode", "dark"],
-        "enabled": true,
+        "enabled": false,
         "dangerous": false
       },
       {
@@ -318,7 +318,7 @@
     "hiddenApps": []
   },
   "lock": {
-    "recolourLogo": false
+    "recolourLogo": true
   },
   "notifs": {
     "actionOnClick": false,
@@ -359,7 +359,7 @@
     "commands": {
       "logout": ["loginctl", "terminate-session", ""],
       "shutdown": ["systemctl", "poweroff"],
-      "hibernate": ["systemctl", "hibernate"],
+      "hibernate": ["systemctl", "suspend"],
       "reboot": ["systemctl", "reboot"]
     }
   },
