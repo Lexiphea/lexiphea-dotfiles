@@ -67,16 +67,16 @@
       "inhibitWhenAudio": true,
       "timeouts": [
         {
-          "timeout": 600,
+          "timeout": 300,
           "idleAction": "lock"
         },
         {
-          "timeout": 900,
+          "timeout": 600,
           "idleAction": "hyprctl dispatch dpms off",
           "returnAction": "hyprctl dispatch dpms on"
         },
         {
-          "timeout": 1800,
+          "timeout": 1200,
           "idleAction": ["systemctl", "suspend"]
         }
       ]
@@ -249,7 +249,7 @@
         "icon": "light_mode",
         "description": "Change the scheme to light mode",
         "command": ["setMode", "light"],
-        "enabled": false,
+        "enabled": true,
         "dangerous": false
       },
       {
@@ -257,7 +257,7 @@
         "icon": "dark_mode",
         "description": "Change the scheme to dark mode",
         "command": ["setMode", "dark"],
-        "enabled": false,
+        "enabled": true,
         "dangerous": false
       },
       {
@@ -266,15 +266,15 @@
         "description": "Shutdown the system",
         "command": ["systemctl", "poweroff"],
         "enabled": true,
-        "dangerous": true
+        "dangerous": false
       },
       {
-        "name": "Reboot",
+        "name": "Restart",
         "icon": "cached",
-        "description": "Reboot the system",
+        "description": "Restart the system",
         "command": ["systemctl", "reboot"],
         "enabled": true,
-        "dangerous": true
+        "dangerous": false
       },
       {
         "name": "Logout",
@@ -282,7 +282,7 @@
         "description": "Log out of the current session",
         "command": ["loginctl", "terminate-user", ""],
         "enabled": true,
-        "dangerous": true
+        "dangerous": false
       },
       {
         "name": "Lock",

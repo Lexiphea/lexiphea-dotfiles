@@ -36,7 +36,7 @@ DOTFILES_DIR="$HOME/.dotfiles"
 print_info "Setting up dotfiles repository..."
 if [ ! -d "$DOTFILES_DIR" ]; then
     print_info "Cloning dotfiles repository..."
-    git clone <your-repo-url> "$DOTFILES_DIR"
+    git clone https://github.com/Lexiphea/lexiphea-dotfiles "$DOTFILES_DIR"
 else
     print_info "Updating dotfiles repository..."
     cd "$DOTFILES_DIR" && git pull

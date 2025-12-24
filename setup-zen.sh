@@ -32,7 +32,31 @@ if [ ! -d "$PROFILE_DIR" ]; then
     exit 1
 fi
 
-echo "Please make sure Zen Browser is installed manually (https://zenbrowser.com/downloads)."
+# Validate required files exist
+if [ ! -f "$ZEN_DIR/userChrome.css" ]; then
+    echo "Error: $ZEN_DIR/userChrome.css not found" >&2
+    exit 1
+fi
+
+if [ ! -f "$ZEN_DIR/native_app/manifest.json" ]; then
+    echo "Error: $ZEN_DIR/native_app/manifest.json not found" >&2
+    exit 1
+fi
+
+if [ ! -f "$ZEN_DIR/native_app/app.fish" ]; then
+    echo "Error: $ZEN_DIR/native_app/app.fish not found" >&2
+    exit 1
+fi
+
+# Check for required dependencies
+for cmd in fish jq inotifywait; do
+    if ! command -v "$cmd" &> /dev/null; then
+        echo "Error: Required command '$cmd' not found. Please install it first." >&2
+        exit 1
+    fi
+done
+
+echo "Please make sure Zen Browser is installed manually (yay -S zen-browser-bin)."
 
 mkdir -p "$PROFILE_DIR/chrome"
 ln -sf "$ZEN_DIR/userChrome.css" "$PROFILE_DIR/chrome/userChrome.css"
@@ -46,7 +70,14 @@ sed "s|{{ \$lib }}|$DEST_LIB|" "$ZEN_DIR/native_app/manifest.json" > "$DEST_MANI
 chmod 644 "$DEST_MANIFEST"
 echo "Copied native messaging manifest to $DEST_MANIFEST"
 
-ln -sf "$ZEN_DIR/native_app/app.fish" "$DEST_LIB/caelestiafox"
+# Create a wrapper script that invokes fish explicitly
+cat > "$DEST_LIB/caelestiafox" << 'WRAPPER'
+#!/bin/bash
+exec fish "$(dirname "$(realpath "$0")")/app.fish" "$@"
+WRAPPER
 chmod +x "$DEST_LIB/caelestiafox"
+
+# Symlink the actual fish script alongside the wrapper
+ln -sf "$ZEN_DIR/native_app/app.fish" "$DEST_LIB/app.fish"
 echo "Installed native app entry at $DEST_LIB/caelestiafox"
 

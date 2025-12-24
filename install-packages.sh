@@ -11,13 +11,11 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-# Pacman packages
 PACMAN_PACKAGES=(
     hyprland
     hyprpaper
     hyprshot
     hyprland-qt-support
-    hyprpaper
     hyprpolkitagent
     hyprutils
     hyprcursor
@@ -28,8 +26,6 @@ PACMAN_PACKAGES=(
     yazi
     timeshift
     btop
-    thunar
-    thunar-actions-plugin
     unzip
     bitwarden
     easyeffects
@@ -40,13 +36,32 @@ PACMAN_PACKAGES=(
     lib32-nvidia-utils
     nvidia-utils
     nvidia-settings
+    ddcutil
+    brightnessctl
+    networkmanager
+    lm_sensors
+    fish
+    aubio
+    libpipewire
+    glibc
+    qt6-declarative
+    gcc-libs
+    material-symbols-fonts
+    swappy
+    libqalculate
+    bash
+    qt6-base
+    ttf-cascadia-code-nerd
+    ttf-cascadia-mono-nerd
+    cmake
+    ninja
 )
 
-# AUR packages (installed via yay)
 AUR_PACKAGES=(
-    caelestia-shell
+    caelestia-cli
+    app2unit
+    libcava
     cursor-bin
-    bitwarden-bin
     spicetify-cli
     protontricks
     vesktop-bin
@@ -54,6 +69,7 @@ AUR_PACKAGES=(
     wtype-git
     zen-browser-bin
     bibata-cursor-theme-bin
+    quickshell-git
 )
 
 # Function to print colored messages
@@ -77,7 +93,7 @@ fi
 
 # Update pacman database
 print_info "Updating pacman database..."
-sudo pacman -Sy
+sudo pacman -Syu
 
 # Install pacman packages
 if [ ${#PACMAN_PACKAGES[@]} -gt 0 ]; then
