@@ -1,2 +1,44 @@
 [mgr]
 show_hidden = true
+sort_sensitive = false
+sort_dir_first = true
+
+[preview]
+wrap = "yes"
+image_quality = 50
+max_width = 100000
+max_height = 100000
+image_bound = [10000,10000]
+
+[opener]
+image_open = [
+    { run = 'swayimg "$@"', orphan = true, desc = "swayimg", for = "unix" },
+]
+
+pdf_open = [
+    { run = 'okular "$@"', desc = "okular", for = "unix" },
+]
+
+extract_script = [
+	{ run = '~/bin/extract-7z.sh "$@"', block = true, desc = "Extract to Folder" }
+]
+
+[open]
+prepend_rules = [
+    { mime = "image/*",				use = "image_open" },
+    { mime = "application/pdf", 		use = "okular" },
+    { name = "*.pdf", 				use = "okular"}, 
+    { mime = "application/x-7z-compressed", 	use = "extract_script" },
+    { mime = "application/zip",             	use = "extract_script" },
+    { mime = "application/vnd.rar",         	use = "extract_script" },
+    { mime = "application/x-rar",           	use = "extract_script" },
+    { mime = "application/x-tar",           	use = "extract_script" },
+    { mime = "application/x-gzip",          	use = "extract_script" },
+    { mime = "application/x-bzip2",         	use = "extract_script" },
+    { mime = "application/x-xz",            	use = "extract_script" },
+    { mime = "application/x-compressed-tar",	use = "extract_script" },
+    { mime = "application/x-iso9660-image", 	use = "extract_script" },
+    
+    # Optional: Match by file extension as a fallback
+    { name = "*.{7z,zip,rar,tar,gz,bz2,xz,iso}", use = "extract_script" }
+]
