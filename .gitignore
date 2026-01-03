@@ -6,3 +6,5 @@ qt5ct/*
 qt6ct/*
 .vscode
 .cursor
+hypr/scheme/current.conf
+cava/config
