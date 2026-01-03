@@ -1,4 +1,8 @@
 adhoc/*
-qt5ct/colors/caelestia.colors
-qt6ct/colors/caelestia.colors
 hypr/scheme/current.conf
+gtk-3.0/*
+gtk-4.0/*
+qt5ct/*
+qt6ct/*
+.vscode
+.cursor

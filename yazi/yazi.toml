@@ -6,8 +6,8 @@ sort_dir_first = true
 [preview]
 wrap = "yes"
 image_quality = 50
-max_width = 100000
-max_height = 100000
+max_width = 10000
+max_height = 10000
 image_bound = [10000,10000]
 
 [opener]
