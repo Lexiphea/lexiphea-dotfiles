@@ -1,10 +1,10 @@
 {
   "appearance": {
     "rounding": {
-      "scale": 1.0261448792672774
+      "scale": 1.0039232053422371
     },
     "spacing": {
-      "scale": 0.3689425478767693
+      "scale": 0.5171118530884808
     },
     "padding": {
       "scale": 1
@@ -17,12 +17,12 @@
         "clock": "Rubik"
       },
       "size": {
-        "scale": 0.947746243739566
+        "scale": 1
       }
     },
     "anim": {
       "durations": {
-        "scale": 0.4885642737896495
+        "scale": 0.5253756260434057
       }
     },
     "transparency": {
@@ -109,7 +109,7 @@
   "bar": {
     "persistent": true,
     "showOnHover": true,
-    "dragThreshold": 20,
+    "dragThreshold": 10,
     "scrollActions": {
       "workspaces": true,
       "volume": true,
@@ -123,7 +123,7 @@
     "workspaces": {
       "shown": 5,
       "activeIndicator": true,
-      "occupiedBg": false,
+      "occupiedBg": true,
       "showWindows": true,
       "showWindowsOnSpecialWorkspaces": true,
       "activeTrail": false,
@@ -141,8 +141,8 @@
     },
     "tray": {
       "background": false,
-      "recolour": false,
-      "compact": false,
+      "recolour": true,
+      "compact": true,
       "iconSubs": []
     },
     "status": {
@@ -205,7 +205,7 @@
   },
   "border": {
     "thickness": 4,
-    "rounding": 6
+    "rounding": 4
   },
   "dashboard": {
     "enabled": true,
