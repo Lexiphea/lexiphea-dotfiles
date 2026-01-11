@@ -511,7 +511,7 @@
     }
   },
   "services": {
-    "weatherLocation": "Subang Jaya",
+    "weatherLocation": "",
     "useFahrenheit": false,
     "useTwelveHourClock": true,
     "gpuType": "NVIDIA",
