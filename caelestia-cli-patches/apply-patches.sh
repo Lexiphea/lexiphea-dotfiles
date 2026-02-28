@@ -5,7 +5,7 @@
 set -e
 
 PATCH_DIR="$(dirname "$0")"
-CAELESTIA_DIR="/usr/lib/python3.13/site-packages/caelestia"
+CAELESTIA_DIR="/usr/lib/python3.14/site-packages/caelestia"
 
 echo "=== Backing up original files ==="
 cp -v "${CAELESTIA_DIR}/utils/colour.py" "${CAELESTIA_DIR}/utils/colour.py.bak"
