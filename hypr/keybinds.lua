@@ -30,8 +30,6 @@ hl.bind(mainMod .. " + SHIFT + G", hl.dsp.window.move({ workspace = "special:gam
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e+1" }))
 
-hl.bind(mainMod .. " + ALT + right", hl.dsp.layout("move +col"))
-hl.bind(mainMod .. " + ALT + left", hl.dsp.layout("move -col"))
 hl.bind(mainMod .. " + minus", hl.dsp.layout("colresize -0.2"))
 hl.bind(mainMod .. " + equal", hl.dsp.layout("colresize +0.2"))
 hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.move({ direction = "left" }))
