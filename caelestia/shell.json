@@ -458,6 +458,7 @@
         "brightnessIncrement": 0.1,
         "defaultPlayer": "Spotify",
         "gpuType": "NVIDIA",
+        "lyricsBackend": "NetEase",
         "maxVolume": 1,
         "playerAliases": [
             {
