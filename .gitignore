@@ -8,3 +8,4 @@ qt6ct/*
 .cursor
 hypr/scheme/current.conf
 cava/config
+caelestia-cli-patches/__pycache__/*
