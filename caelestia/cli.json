@@ -1,6 +1,9 @@
 {
-    "theme": {
-      "enableGtk": true,
-      "enableQt": true
-    }
+  "theme": {
+    "enableGtk": true,
+    "enableQt": true,
+    "enableChromium": false,
+    "iconThemeDark": "breeze-dark",
+    "iconThemeLight": "breeze"
   }
+}

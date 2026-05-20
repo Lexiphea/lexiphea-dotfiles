@@ -26,8 +26,8 @@ extract_script = [
 [open]
 prepend_rules = [
     { mime = "image/*",				use = "image_open" },
-    { mime = "application/pdf", 		use = "okular" },
-    { name = "*.pdf", 				use = "okular"}, 
+    { mime = "application/pdf", 		use = "pdf_open" },
+    { url = "*.pdf", 				use = "pdf_open" },
     { mime = "application/x-7z-compressed", 	use = "extract_script" },
     { mime = "application/zip",             	use = "extract_script" },
     { mime = "application/vnd.rar",         	use = "extract_script" },
@@ -40,5 +40,5 @@ prepend_rules = [
     { mime = "application/x-iso9660-image", 	use = "extract_script" },
     
     # Optional: Match by file extension as a fallback
-    { name = "*.{7z,zip,rar,tar,gz,bz2,xz,iso}", use = "extract_script" }
+    { url = "*.{7z,zip,rar,tar,gz,bz2,xz,iso}", use = "extract_script" }
 ]

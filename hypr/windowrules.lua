@@ -2,6 +2,21 @@ hl.workspace_rule({ workspace = "1", monitor = "DP-1", default = true })
 hl.workspace_rule({ workspace = "6", monitor = "HDMI-A-1", default = true, layout = "dwindle" })
 hl.workspace_rule({ workspace = "special:gaming", monitor = "DP-1", no_shadow = true, layout = "master" })
 
+hl.layer_rule({
+    name = "vicinae-blur",
+    match = {
+        namespace = "vicinae",
+    },
+    blur = true,
+    ignore_alpha = 0,
+})
+
+hl.layer_rule({
+    name = "vicinae-no-animation",
+    no_anim = true,
+    match = { namespace = "vicinae"},
+})
+
 hl.window_rule({
     name = "kitty_tile_rule",
     match = { class = "^(kitty)$" },

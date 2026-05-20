@@ -2,7 +2,7 @@ local M = {
     terminal = "kitty",
     fileManager = "thunar",
     ide = "zeditor",
-    menu = "hyprlauncher",
+    menu = "vicinae toggle",
     browser = "zen-browser",
     mainMod = "SUPER",
 }
